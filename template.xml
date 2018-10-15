@@ -1,0 +1,36 @@
+<template format="4"
+		revision="1"
+		name="VIPER"
+		description="VIPER module create">
+ 
+	<category value="Other"/>
+ 
+	<parameter id="NAME"
+		name="Module VIPER Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default=""
+		help="Create VIPER module enter name"/>
+
+	<parameter id="FRAGMENT"
+		name="Create fragment"
+		type="boolean"
+		default="true"
+		help="Create VIPER module enter name"/>
+
+	<parameter id="ACTIVITY"
+		name="Create Activity"
+		type="boolean"
+		default="false"
+		help="Create Activity"/>
+
+	<parameter id="DAGGER"
+		name="Create Dagger component"
+		type="boolean"
+		default="true"
+		help="Create Dagger component, module, scope"/>
+ 
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+ 
+</template>
